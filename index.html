@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <header class="cabecalho">
+            <img class="logo" src="./assets/Logo-Voxus.svg" alt="Logo Voxus"/>
+        </header>
+        <main>
+            <article>
+                <header>
+                    <h1>Você está a poucos passos de otimizar suas campanhas!</h1>
+                    <span>Queremos conhecer mais sobre sua empresa para melhorar sua experiência com a Voxus</span>
+                </header>
+                <div class="body">
+                    <form  onsubmit="onSubmit(event);">
+                            <div class="input">
+                                <label name="name" id="name-label" onclick="onFocus(this);">Nome completo</label>
+                                <input type="text" name="name" id="name" onfocus="onFocus(this);"/>
+                                <span id='name-error'>Este campo é obrigatório</span>
+                            </div>
+                            <div class="input-phone">
+                                <select id='select-country' required>
+                                    <option value="en">
+                                            en
+                                    </option>
+                                    <option value="br">
+                                            br
+                                </option>
+                            </select>
+                            <div class="input-country">
+                                <label name="telefone" id="telefone-label" onclick="onFocus(this);">Telefone</label>
+                                <input type="text" name="telefone" id="telefone" onfocus="onFocus(this);"/>
+                                <span id='telefone-error'>Este campo é obrigatório</span>
+                            </div>
+                        </div>
+                        <div class="input">
+                            <label name="email" id="email-label" onclick="onFocus(this);">Endereço de e-mail</label>
+                            <input type="email" name="email" id="email" onfocus="onFocus(this);"/>
+                            <span id='email-error'>Este campo é obrigatório</span>
+                        </div>
+                        <div class="input">
+                            <label name="empresa" id="empresa-label" onclick="onFocus(this);">Nome da empresa</label>
+                            <input type="text" name="empresa" id="empresa"/>
+                            <span id='empresa-error'>Este campo é obrigatório</span>
+                        </div>
+                        <div class="input">
+                            <label name="site" id="site-label" onclick="onFocus(this);">URL do site</label>
+                            <input type="text" name="site" id="site" onfocus="onFocus(this);"/>
+                            <span id='site-error'>Este campo é obrigatório</span>
+                        </div>
+                        <div class="input">
+                            <select id='select' required>
+                                <option value="" disabled selected hidden>Verba mensal em mídia</option>
+                                <option value="1"><= 5000</option>
+                                <option value="2">>= R$5.001 e <= R$30.000</option>
+                                <option value="3">>= R$30.001 e <= R$100.000</option>
+                                <option value="4">>= R$100.001 e <= R$500.000</option>
+                                <option value="5">= R$500.001</option>
+                                <option value="6">Não se aplica</option>
+                            </select>
+                            <span id='select-error'>Este campo é obrigatório</span>
+                        </div>
+                        <button type="submit" id="submit">
+                            Experimentar gratuitamente
+                        </button>
+                        <span id='message'>Entraremos em contato em 24hs úteis.</span>
+                    </form>
+                </div>
+                <section id="footer">
+                    <span class="trial">
+                            *Para usar o trial grátis você precisa ser um e-commerce e concordar 
+                            com os termos e requisitos do trial gratuito. Saiba mais em: 
+                            <a href="#">Termos e requisitos de trial gratuito</a>
+                    </span>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <ul>
+                <li><img src="./assets/Logo-Voxus-cinza.svg" alt="Logo Voxus" /></li>
+                <li><a>Termos de serviço</a></li>
+                <li><a>Política de privacidade</a></li>
+                <li><a>Opções de Anúncio</a></li>
+            </ul>
+        </footer>
+        <script type="text/javascript" src="./index.js"></script>
+    </body>
+</html>

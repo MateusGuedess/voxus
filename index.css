@@ -1,0 +1,301 @@
+@keyframes fadeDownInText {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeDownInTextError {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background:  rgba(125, 159, 173, 0.08) url('./assets/background.svg') 100% no-repeat;
+    background-position: bottom;
+}
+
+/* header */
+header.cabecalho {
+    background-color: #FFFFFFFF;
+    width: 100%;
+    height: 5.3%;
+    display: flex;
+    border-bottom: 1px solid rgba(45, 58, 64, 0.1);
+}
+
+.logo {
+    margin: 0 15%;
+}
+
+/* body */
+main {
+    width: 100%;
+    height: 89.6%;
+}
+article {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+article header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+}
+
+h1 {
+    font: normal bold 32px/42px Roboto;
+    letter-spacing: 0.0125em;
+    color: #2D3A40;
+}
+
+article header span {
+    margin-bottom: 5%;
+}
+
+article div.body {
+    width: 50%;
+    padding-top: 17px;
+    height: 560px;
+    max-width: 700px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 40px rgba(116, 130, 150, 0.2);
+    border-radius: 3px;
+}
+
+article div.body form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article form div.input {
+    height: 42px;
+    width: 280px;
+    margin: 15px 0;
+}
+
+article form div.input label {
+    position: absolute;
+    color: rgba(45, 58, 64, 0.3);
+    text-align: center;
+    background: white;
+    margin: 10px 10px;
+    transition: 0.2s;
+    z-index: 10;
+}
+
+article form div.input input {
+    position: relative;
+    z-index: 9;
+    background: #FFFFFF;
+    border: 1px solid rgba(116, 130, 150, 0.2);
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 42px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+article form div.input span {
+    display: none;
+    transform: translateY(-300px);
+    animation: fadeDownInTextError 1000ms 0ms forwards;
+    width: 225px;
+    height: 27px;
+    padding-left: 10px;
+    background: #F0175C;
+    border-radius: 0px 0px 4px 4px;
+    font: normal 500 12px/36px Roboto;
+    line-height: 36px;
+    letter-spacing: 0.0125em;
+    color: #FFFFFF;
+    margin-top: -5px;
+}
+
+article form div.input-phone {
+    display:flex;
+    align-items: center;
+    height: 42px;
+    border-radius: 3px;
+    border: 1px solid rgba(116, 130, 150, 0.2);
+    box-sizing: border-box;
+    width: 279px;
+}
+
+article form div.input-phone select {
+    height: 40px;
+    border: none;
+    width: 20%;
+    border-right: 1px solid rgba(116,130,150, 0.2);
+}
+
+article form div.input-country {
+    height: 40px;
+    margin: 0 0;
+}
+
+article form div.input-country label {
+    position: absolute;
+    color: rgba(45, 58, 64, 0.3);
+    text-align: center;
+    background: white;
+    margin: 10px 10px;
+    transition: 0.2s;
+    z-index: 10;
+}
+
+article form div.input-country input {
+    position: relative;
+    z-index: 9;
+    background: #FFFFFF;
+    height: 40px;
+    width: 80%;
+    padding: 0 10px;
+    border:none;
+}
+
+article form div.input-country span {
+    display: none;
+    transform: translateY(-300px);
+    animation: fadeDownInTextError 1000ms 0ms forwards;
+    width: 225px;
+    height: 27px;
+    padding-left: 10px;
+    background: #F0175C;
+    border-radius: 0px 0px 4px 4px;
+    font: normal 500 12px/36px Roboto;
+    line-height: 36px;
+    letter-spacing: 0.0125em;
+    color: #FFFFFF;
+    margin-top: -5px;
+}
+
+article form div.input select {
+    background: #FFFFFF;
+    border: 1px solid rgba(116, 130, 150, 0.2);
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 42px;
+    width: 100%;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 7px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: black;
+    padding: 0 10px;
+}
+
+article form div.input select option {
+    color: black;
+}
+
+article form div.input select:required:invalid {
+    color: #DDD;
+    padding: 0 10px;
+    font: normal 500 16px/42px Roboto;
+}
+
+
+article form button {
+    width: 250px;
+    height: 42px;
+    left: 595px;
+    top: 749px;
+    border: 1px solid #14E298;
+    background: #14E298;
+    border-radius: 3px;
+    font: normal 500 16px/36px Roboto;
+    letter-spacing: 0.0125em;
+    color: #FFFFFF;
+    transition: 1s;
+}
+
+article form span#message {
+    display: none;
+    margin-top: 20px;
+    transform: translateY(-300px);
+    animation: fadeDownInText 1000ms 0ms forwards;
+    position: relative;
+    width: 300px;
+    height: 36px;
+    background: #F5F7FA;
+    border-radius: 3px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+    color: #2D3A40;
+
+}
+
+article form button:hover {
+    background: #23F7AB;
+    border:1px solid #23F7AB;
+    cursor: pointer;
+}
+
+article section {
+    width: 37%;
+    text-align: center;
+    margin-top: 23px;
+    opacity: 0;
+    max-height:0 ;
+    transition: 1s;
+}
+
+select#country option[value="br"]   { background-image:url('./assets/brazil.png');   }
+
+/* footer */
+footer {
+    width: 100%;
+    height: 5%;
+}
+
+ul {
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: flex;
+    padding: 18px 0 0 0;
+    margin: 0 15%;
+    align-items: center;
+}
+
+li {
+    padding: 0 10px;
+}
+
+li a {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 27px;
+    /* or 257% */
+    letter-spacing: 0.0125em;
+
+    color: #748296;
+}
